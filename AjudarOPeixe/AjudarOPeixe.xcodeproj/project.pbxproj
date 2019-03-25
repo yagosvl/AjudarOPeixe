@@ -15,6 +15,7 @@
 		3F1EA20322455387000816D2 /* AjudarOPeixeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EA20222455387000816D2 /* AjudarOPeixeTests.swift */; };
 		3F1EA20E22455387000816D2 /* AjudarOPeixeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EA20D22455387000816D2 /* AjudarOPeixeUITests.swift */; };
 		3F1EA21C22455E90000816D2 /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EA21B22455E8F000816D2 /* Tarefa.swift */; };
+		3F6D8ADC224957EA00BBC22E /* TarefaDAOTestador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */; };
 		3FF138892245706D005070CB /* TarefaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF138882245706D005070CB /* TarefaDAO.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		3F1EA20D22455387000816D2 /* AjudarOPeixeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjudarOPeixeUITests.swift; sourceTree = "<group>"; };
 		3F1EA20F22455387000816D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1EA21B22455E8F000816D2 /* Tarefa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
+		3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaDAOTestador.swift; sourceTree = "<group>"; };
 		3FF138882245706D005070CB /* TarefaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			children = (
 				3F1EA20222455387000816D2 /* AjudarOPeixeTests.swift */,
 				3F1EA20422455387000816D2 /* Info.plist */,
+				3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */,
 			);
 			path = AjudarOPeixeTests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F1EA20322455387000816D2 /* AjudarOPeixeTests.swift in Sources */,
+				3F6D8ADC224957EA00BBC22E /* TarefaDAOTestador.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
