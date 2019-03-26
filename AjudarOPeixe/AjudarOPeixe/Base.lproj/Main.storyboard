@@ -101,6 +101,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tarefas do Dia" id="ScG-CR-B6G"/>
+                    <connections>
+                        <outlet property="TarefasTableView" destination="oJl-VO-U6o" id="oJB-v1-9eg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-kd-M7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

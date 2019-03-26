@@ -11,7 +11,19 @@ import UIKit
 class ListaTarefasViewController: UITableViewController {
     
     var listaTarefasDoDia = [Tarefa]()
-
+    
+    @IBOutlet var TarefasTableView: UITableView!
+    
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            
+            self.listaTarefasDoDia.remove(at: indexPath.row)
+            
+            TarefasTableView.reloadData()
+        }
+}
     override func viewDidLoad() {
         super.viewDidLoad()
         
