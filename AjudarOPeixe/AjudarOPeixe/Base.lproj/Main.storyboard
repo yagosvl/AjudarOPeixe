@@ -6,26 +6,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AjudarOPeixe" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
         <!--Item 1-->
         <scene sceneID="FcC-mt-qF9">
             <objects>
@@ -79,22 +63,31 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h33-2Q-BD0" userLabel="SwtIsDone">
-                                            <rect key="frame" x="8" y="22" width="51" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="IsDone:" destination="Opo-1G-yki" eventType="valueChanged" id="7Nl-OQ-5N1"/>
-                                                <action selector="IsDoneAction:" destination="Opo-1G-yki" eventType="valueChanged" id="gtJ-f6-Xow"/>
-                                            </connections>
-                                        </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdG-Fn-Wao" userLabel="LblNome">
-                                            <rect key="frame" x="135" y="22" width="42" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="HEp-C6-PGA">
+                                            <rect key="frame" x="8" y="14" width="359" height="46.5"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h33-2Q-BD0" userLabel="SwtIsDone">
+                                                    <rect key="frame" x="0.0" y="8" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="IsDone:" destination="Opo-1G-yki" eventType="valueChanged" id="7Nl-OQ-5N1"/>
+                                                        <action selector="IsDoneAction:" destination="Opo-1G-yki" eventType="valueChanged" id="gtJ-f6-Xow"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdG-Fn-Wao" userLabel="LblNome">
+                                                    <rect key="frame" x="55" y="13" width="304" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HEp-C6-PGA" firstAttribute="leading" secondItem="fdb-u1-PZ5" secondAttribute="leadingMargin" id="1fg-LU-sTt"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HEp-C6-PGA" secondAttribute="bottom" constant="6" id="5Qi-8J-lGF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HEp-C6-PGA" secondAttribute="trailing" id="IP1-RH-E8Q"/>
+                                        <constraint firstItem="HEp-C6-PGA" firstAttribute="top" secondItem="fdb-u1-PZ5" secondAttribute="topMargin" constant="6" id="ROz-sc-Yjd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="IsDone" destination="h33-2Q-BD0" id="zEg-3e-W2x"/>
@@ -107,7 +100,7 @@
                             <outlet property="delegate" destination="7Fp-0P-ewx" id="CeM-xh-YTQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ScG-CR-B6G"/>
+                    <navigationItem key="navigationItem" title="Tarefas do Dia" id="ScG-CR-B6G"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-kd-M7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -25,8 +25,12 @@ class TarefaDAO{
         self.tarefas.append(Tarefa(nome: "Ir ao mercado", data: "23/03/2019 10:30:00"))
         self.tarefas.append(Tarefa(nome: "Lavar roupa", data: "25/03/2019 09:30:00"))
         self.tarefas.append(Tarefa(nome: "Estudar inglês", data: "25/03/2019 08:00:00"))
-        self.tarefas.append(Tarefa(nome: "Comprar pão", data: "27/03/2019 09:45:00"))
-        self.tarefas.append(Tarefa(nome: "Lavar banheiro", data: "29/03/2019 10:30:00"))
+        self.tarefas.append(Tarefa(nome: "Comprar pão", data: "26/03/2019 09:45:00"))
+        self.tarefas.append(Tarefa(nome: "Lavar banheiro", data: "26/03/2019 10:30:00"))
+        self.tarefas.append(Tarefa(nome: "Comprar Sabao", data: "27/03/2019 09:45:00"))
+        self.tarefas.append(Tarefa(nome: "Lavar carro", data: "28/03/2019 10:30:00"))
+        self.tarefas.append(Tarefa(nome: "Comprar feijao", data: "28/03/2019 09:45:00"))
+        self.tarefas.append(Tarefa(nome: "Lavar varanda", data: "29/03/2019 10:30:00"))
     }
     
     static func getAll() -> [Tarefa]{

@@ -11,14 +11,12 @@ import UIKit
 class ListaTarefasViewController: UITableViewController {
     
     var listaTarefasDoDia = [Tarefa]()
-        
-        
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listaTarefasDoDia = TarefaDAO.getAll()
+        TarefaDAO.fillTarefas()
+        listaTarefasDoDia = TarefaDAO.getTarefasDoDia()
         
         
         // Uncomment the following line to preserve selection between presentations
