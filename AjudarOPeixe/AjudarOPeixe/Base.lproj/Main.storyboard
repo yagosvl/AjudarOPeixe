@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BcA-Ju-Lmw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,25 +25,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="iqQ-OF-0uv">
-            <objects>
-                <viewController id="db0-l1-4cE" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ND7-uy-hUh"/>
-                        <viewControllerLayoutGuide type="bottom" id="t0a-oU-ksN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OmY-Ea-1lU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="7xo-pw-2Wf"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T3c-kS-QZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2083" y="468"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="FcC-mt-qF9">
@@ -75,12 +56,79 @@
                     </tabBar>
                     <connections>
                         <segue destination="hcE-iE-CSH" kind="relationship" relationship="viewControllers" id="w9Q-x8-SFi"/>
-                        <segue destination="db0-l1-4cE" kind="relationship" relationship="viewControllers" id="3Mq-MQ-2XO"/>
+                        <segue destination="Mm7-uJ-m2H" kind="relationship" relationship="viewControllers" id="NLV-Dz-Lod"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvH-mM-b0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1139" y="142"/>
+        </scene>
+        <!--Tarefas do Dia-->
+        <scene sceneID="jNa-RN-GIW">
+            <objects>
+                <tableViewController title="Tarefas do Dia" id="7Fp-0P-ewx" customClass="ListaTarefasViewController" customModule="AjudarOPeixe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" id="oJl-VO-U6o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tarefaId" selectionStyle="default" indentationWidth="10" reuseIdentifier="tarefaId" rowHeight="75" id="Opo-1G-yki" customClass="TarefaViewCell" customModule="AjudarOPeixe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Opo-1G-yki" id="fdb-u1-PZ5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h33-2Q-BD0" userLabel="SwtIsDone">
+                                            <rect key="frame" x="8" y="22" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="IsDone:" destination="Opo-1G-yki" eventType="valueChanged" id="7Nl-OQ-5N1"/>
+                                                <action selector="IsDoneAction:" destination="Opo-1G-yki" eventType="valueChanged" id="gtJ-f6-Xow"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdG-Fn-Wao" userLabel="LblNome">
+                                            <rect key="frame" x="135" y="22" width="42" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="IsDone" destination="h33-2Q-BD0" id="zEg-3e-W2x"/>
+                                    <outlet property="Nome" destination="CdG-Fn-Wao" id="AkH-Ku-vXW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Fp-0P-ewx" id="dgg-1N-fGD"/>
+                            <outlet property="delegate" destination="7Fp-0P-ewx" id="CeM-xh-YTQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ScG-CR-B6G"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-kd-M7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3064.8000000000002" y="587.85607196401804"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="8pG-Kg-4hD">
+            <objects>
+                <navigationController id="Mm7-uJ-m2H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="oke-J5-WRl"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qbV-EX-SYX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Fp-0P-ewx" kind="relationship" relationship="rootViewController" id="rAr-DT-fVf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1v-ok-K2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082" y="588"/>
         </scene>
     </scenes>
 </document>
