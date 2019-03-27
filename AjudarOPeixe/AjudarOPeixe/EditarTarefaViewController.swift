@@ -38,19 +38,8 @@ class EditarTarefaViewController: UIViewController {
         
         TarefaDatePicker.date = tarefaDate!
         
-        var contConcluidas = 0
         
-        for subTar in tarefaEdicao.subtarefas{
-            if(subTar.isFeita){
-                contConcluidas = contConcluidas + 1
-            }
-        }
-        
-        if tarefaEdicao.subtarefas.count > 0{
-            TarefaProgress.setProgress (Float(contConcluidas / tarefaEdicao.subtarefas.count), animated: true)
-        }else{
-            TarefaProgress.setProgress(0.0, animated: true)
-        }
+        TarefaProgress.setProgress(tarefaEdicao.percentualConcluida, animated: true)
 
         // Do any additional setup after loading the view.
     }
