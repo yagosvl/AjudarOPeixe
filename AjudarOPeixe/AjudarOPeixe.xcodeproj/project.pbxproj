@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F06C061224BDE5700F06C2B /* EditarTarefaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06C060224BDE5700F06C2B /* EditarTarefaViewController.swift */; };
+		3F06C063224C003100F06C2B /* AdicionarTarefasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06C062224C003100F06C2B /* AdicionarTarefasViewController.swift */; };
 		3F1258AB224A8E0A0062AF2C /* ListaTarefasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1258AA224A8E0A0062AF2C /* ListaTarefasViewController.swift */; };
 		3F1258AD224A8F6D0062AF2C /* TarefaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1258AC224A8F6D0062AF2C /* TarefaViewCell.swift */; };
 		3F1EA1EE22455387000816D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EA1ED22455387000816D2 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3F06C060224BDE5700F06C2B /* EditarTarefaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditarTarefaViewController.swift; sourceTree = "<group>"; };
+		3F06C062224C003100F06C2B /* AdicionarTarefasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionarTarefasViewController.swift; sourceTree = "<group>"; };
 		3F1258AA224A8E0A0062AF2C /* ListaTarefasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaTarefasViewController.swift; sourceTree = "<group>"; };
 		3F1258AC224A8F6D0062AF2C /* TarefaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TarefaViewCell.swift; path = ../TarefaViewCell.swift; sourceTree = "<group>"; };
 		3F1EA1EA22455387000816D2 /* AjudarOPeixe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AjudarOPeixe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				3F1EA1ED22455387000816D2 /* AppDelegate.swift */,
 				3F1EA1EF22455387000816D2 /* ViewController.swift */,
 				3F1EA1F122455387000816D2 /* Main.storyboard */,
+				3F06C062224C003100F06C2B /* AdicionarTarefasViewController.swift */,
 				3F06C060224BDE5700F06C2B /* EditarTarefaViewController.swift */,
 				3F1258AA224A8E0A0062AF2C /* ListaTarefasViewController.swift */,
 				3F1EA21B22455E8F000816D2 /* Tarefa.swift */,
@@ -283,6 +286,7 @@
 				3FF138892245706D005070CB /* TarefaDAO.swift in Sources */,
 				3F1258AB224A8E0A0062AF2C /* ListaTarefasViewController.swift in Sources */,
 				3F1EA21C22455E90000816D2 /* Tarefa.swift in Sources */,
+				3F06C063224C003100F06C2B /* AdicionarTarefasViewController.swift in Sources */,
 				3F1EA1EE22455387000816D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

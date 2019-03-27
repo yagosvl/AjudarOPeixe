@@ -97,7 +97,13 @@
                             <outlet property="delegate" destination="7Fp-0P-ewx" id="CeM-xh-YTQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tarefas do Dia" id="ScG-CR-B6G"/>
+                    <navigationItem key="navigationItem" title="Tarefas do Dia" id="ScG-CR-B6G">
+                        <barButtonItem key="rightBarButtonItem" title="Nova tarefa" id="3PJ-5A-bpx">
+                            <connections>
+                                <segue destination="xtr-xp-VyV" kind="show" id="ydl-pT-Wpv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="TarefasTableView" destination="oJl-VO-U6o" id="oJB-v1-9eg"/>
                     </connections>
@@ -105,6 +111,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DJP-kd-M7P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3064.8000000000002" y="587.85607196401804"/>
+        </scene>
+        <!--Adicionar Tarefas View Controller-->
+        <scene sceneID="YTK-Ov-otz">
+            <objects>
+                <viewController id="xtr-xp-VyV" customClass="AdicionarTarefasViewController" customModule="AjudarOPeixe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="70N-at-JHj"/>
+                        <viewControllerLayoutGuide type="bottom" id="fDk-Nz-MaV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Fe-Vu-g1s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-ZJ-Hq7">
+                                <rect key="frame" x="139" y="166" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-f5-Ebg">
+                                <rect key="frame" x="164" y="262" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="AdicionarTarefaButton:" destination="xtr-xp-VyV" eventType="touchUpInside" id="t0z-wi-dfp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4i-my-46U">
+                                <rect key="frame" x="166" y="103" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="AdicionarTarefaTextField" destination="JdB-ZJ-Hq7" id="oL5-Jb-rk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ieh-P8-S7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3882" y="1055"/>
         </scene>
         <!--Editar Tarefa View Controller-->
         <scene sceneID="yvB-Yc-cGt">
@@ -155,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qQz-Ke-QqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3815" y="588"/>
+            <point key="canvasLocation" x="3886" y="394"/>
         </scene>
         <!--Item-->
         <scene sceneID="8pG-Kg-4hD">
