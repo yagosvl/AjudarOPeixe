@@ -109,14 +109,20 @@ class ListaTarefasViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if let proximaTela = segue.destination as? EditarTarefaViewController{
+            proximaTela.tarefaEdicao = listaTarefasDoDia[(TarefasTableView.indexPathForSelectedRow?.row)!]
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }
