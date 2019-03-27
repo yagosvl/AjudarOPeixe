@@ -12,21 +12,14 @@ public class Tarefa{
     var id : Int
     var nome : String
     var data : String
-    var subtarefas : [Subtarefa]
-    var percentualConcluida : Double
+    var percentualConcluida : Float
     
     init(nome : String, data: String) {
         self.nome = nome
         self.data = data
-        self.percentualConcluida = 0
+        self.percentualConcluida = 0.0
         self.id = 0
-        self.subtarefas = [Subtarefa]()
         
-    }
-    
-    func CriarSubTarefa(nomeSubTarefa : String) -> Void {
-        let temp = Subtarefa(nome: nomeSubTarefa)
-        self.subtarefas.append(temp)
     }
 }
 

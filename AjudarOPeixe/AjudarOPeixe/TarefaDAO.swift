@@ -67,18 +67,11 @@ class TarefaDAO{
         }
     }
     
-    static func addSubtarefa(tar: Tarefa, sub: Subtarefa){
-        if let tarefa = TarefaDAO.getAll().first(where: { $0.nome == tar.nome }){
-            tarefa.subtarefas.append(sub)
-        }
-    }
-
     static func updTarefa(tarefa : Tarefa){
         if let tarefaUpd = TarefaDAO.getAll().first(where: { $0.id == tarefa.id }){
             tarefaUpd.nome = tarefa.nome
             tarefaUpd.data = tarefa.data
             tarefaUpd.percentualConcluida = tarefa.percentualConcluida
-            tarefaUpd.subtarefas = tarefa.subtarefas
         }
     }
     
