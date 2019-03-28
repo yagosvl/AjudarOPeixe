@@ -10,16 +10,7 @@ import Foundation
 
 class TarefaDAO{
     static var tarefas = [Tarefa]()
-    
-    /*init(){
-        TarefaDAO.tarefas.append(Tarefa(nome: "Arrumar o quarto", data: "22/03/2019 10:00:00"))
-        TarefaDAO.tarefas.append(Tarefa(nome: "Ir ao mercado", data: "23/03/2019 10:30:00"))
-        TarefaDAO.tarefas.append(Tarefa(nome: "Lavar roupa", data: "25/03/2019 09:30:00"))
-        TarefaDAO.tarefas.append(Tarefa(nome: "Estudar inglês", data: "25/03/2019 08:00:00"))
-        TarefaDAO.tarefas.append(Tarefa(nome: "Comprar pão", data: "27/03/2019 09:45:00"))
-        TarefaDAO.tarefas.append(Tarefa(nome: "Lavar banheiro", data: "29/03/2019 10:30:00"))
-    }*/
-    
+       
     static func fillTarefas(){
         self.tarefas.append(Tarefa(nome: "Arrumar o quarto", data: "22/03/2019 10:00:00"))
         self.tarefas.append(Tarefa(nome: "Ir ao mercado", data: "23/03/2019 10:30:00"))
@@ -33,8 +24,117 @@ class TarefaDAO{
         self.tarefas.append(Tarefa(nome: "Lavar varanda", data: "29/03/2019 10:30:00"))
     }
     
+    static func getTarefas(callback: @escaping ((Tarefa) -> Void)) {
+        
+        let endpoint: String = "https://ajudaropeixenodered.mybluemix.net/tarefa/getall"
+        
+        guard let url = URL(string: endpoint) else {
+            print("Erroooo: Cannot create URL")
+            return
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+            
+            if error != nil {
+                print("Error = \(String(describing: error))")
+                return
+            }
+            
+            let responseString = String(data: data!, encoding: String.Encoding.utf8)
+            print("responseString = \(String(describing: responseString))")
+            
+            DispatchQueue.main.async() {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: AnyObject]] {
+                        
+                        let tarefa = Tarefa(json: json[0])
+                        
+                        let nomeTarefa = tarefa.nome
+                        let dataTarefa = tarefa.data
+                        
+                        print("\(nomeTarefa) prevista para o dia/horário: \(dataTarefa).")
+                        
+                        callback(tarefa)
+                        
+                    }else {
+                        
+                        print("Erro ao buscar dados do Json")
+                    }
+                } catch let error as NSError {
+                    print("Error = \(error.localizedDescription)")
+                }
+            }
+            
+        })
+        
+        task.resume()
+    }
+
+    static func getAllFromCloud(callback: @escaping (([Tarefa]) -> ())) {
+        
+        let endpoint: String = "https://ajudaropeixenodered.mybluemix.net/tarefa/getAll"
+        
+        guard let url = URL(string: endpoint) else {
+            print("Erroooo: Cannot create URL")
+            return
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        var tarefasCloud = [Tarefa]()
+        
+        let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+            
+            if error != nil {
+                print("Error = \(String(describing: error))")
+                return
+            }
+            
+            let responseString = String(data: data!, encoding: String.Encoding.utf8)
+            print("responseString = \(String(describing: responseString))")
+            
+            DispatchQueue.main.async() {
+                do {
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [[String: AnyObject]] {
+                        
+                        
+                        for tarefaJson in json{
+                            let tarefa = Tarefa(json: tarefaJson)
+                            print("\(tarefa.nome) prevista para o dia/horário: \(tarefa.data).\n")
+                            tarefasCloud.append(tarefa)
+                        }
+            
+                        callback(tarefasCloud)
+                        
+                    }else {
+                        
+                        print("Erro ao buscar dados do Json")
+                    }
+                } catch let error as NSError {
+                    print("Error = \(error.localizedDescription)")
+                }
+            }
+            
+        })
+        
+        task.resume()
+    }
+    
     static func getAll() -> [Tarefa]{
-        return self.tarefas
+        var tars = [Tarefa]()
+        
+        getAllFromCloud{ (tarefasCloud) -> () in
+            for tar in tarefasCloud{
+                print("Encontrada a tarefa: \(tar.nome) no DAO!")
+                tars.append(tar)
+            }
+            print("OBJ TarefasCloud: \(tarefasCloud)")
+            
+        }
+        print("OBJ tars: \(tars)")
+
+        return tars
     }
     
     static func getTarefasPorData(data : String) -> [Tarefa]{

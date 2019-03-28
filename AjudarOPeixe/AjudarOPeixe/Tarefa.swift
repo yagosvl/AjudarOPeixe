@@ -18,8 +18,23 @@ public class Tarefa{
         self.nome = nome
         self.data = data
         self.percentualConcluida = 0.0
-        self.id = 0
-        
+        self.id = 0        
+    }
+    
+    init(json: [String: AnyObject]) {
+        self.id = json["id"] as? Int ?? 0
+        self.nome = json["nome"] as? String ?? ""
+        self.data = json["data"] as? String ?? ""
+        self.percentualConcluida = json["proprietario"] as? Float ?? 0.0
+    
+        /*self.carro = [Carro]()
+    
+        if let carros = json["carro"] as? [ [String: String] ] {
+            for jsonCarro in carros {
+                let novoCarro = Carro(json: jsonCarro)
+                self.carro.append(novoCarro)
+            }
+        }*/
     }
 }
 

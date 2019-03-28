@@ -23,7 +23,8 @@ class ListaTarefasViewController: UITableViewController {
             
             TarefasTableView.reloadData()
         }
-}
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
