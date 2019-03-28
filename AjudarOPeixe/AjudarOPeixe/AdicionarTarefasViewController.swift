@@ -14,6 +14,9 @@ class AdicionarTarefasViewController: UIViewController {
     @IBOutlet weak var AdicionarTarefaTextField: UITextField!
     
     @IBAction func AdicionarTarefaButton(_ sender: UIButton) {
+        let hoje = TarefaDAO.getDateInStringFormat(date: Date())
+        let tar = Tarefa(nome: AdicionarTarefaTextField.text!, data: hoje)
+        TarefaDAO.addTarefa(tarefa: tar)
     }
     
     

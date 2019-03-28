@@ -254,30 +254,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-ZJ-Hq7">
-                                <rect key="frame" x="139" y="166" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-ZJ-Hq7">
+                                <rect key="frame" x="16" y="144" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-f5-Ebg">
-                                <rect key="frame" x="164" y="262" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-f5-Ebg">
+                                <rect key="frame" x="164" y="240" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="3E8-q7-TrE"/>
+                                </constraints>
+                                <state key="normal" title="Salvar"/>
                                 <connections>
                                     <action selector="AdicionarTarefaButton:" destination="xtr-xp-VyV" eventType="touchUpInside" id="t0z-wi-dfp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4i-my-46U">
-                                <rect key="frame" x="166" y="103" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a nova tarefa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4i-my-46U">
+                                <rect key="frame" x="16" y="103" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="h4i-my-46U" secondAttribute="trailing" id="1b4-Sr-vvv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JdB-ZJ-Hq7" secondAttribute="trailing" id="3lu-zq-gUC"/>
+                            <constraint firstItem="h4i-my-46U" firstAttribute="centerX" secondItem="JdB-ZJ-Hq7" secondAttribute="centerX" id="CxM-tt-Z5k"/>
+                            <constraint firstItem="rFG-f5-Ebg" firstAttribute="top" secondItem="JdB-ZJ-Hq7" secondAttribute="bottom" constant="66" id="Z8v-gA-NjQ"/>
+                            <constraint firstItem="h4i-my-46U" firstAttribute="centerX" secondItem="rFG-f5-Ebg" secondAttribute="centerX" id="aaE-Dt-FP5"/>
+                            <constraint firstItem="h4i-my-46U" firstAttribute="top" secondItem="70N-at-JHj" secondAttribute="bottom" constant="39" id="bd9-wk-ap0"/>
+                            <constraint firstItem="JdB-ZJ-Hq7" firstAttribute="top" secondItem="h4i-my-46U" secondAttribute="bottom" constant="20" id="dEW-VF-1s8"/>
+                            <constraint firstItem="JdB-ZJ-Hq7" firstAttribute="leading" secondItem="7Fe-Vu-g1s" secondAttribute="leadingMargin" id="rGt-xq-zCp"/>
+                            <constraint firstItem="h4i-my-46U" firstAttribute="leading" secondItem="7Fe-Vu-g1s" secondAttribute="leadingMargin" id="ytA-Xn-to7"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="AdicionarTarefaTextField" destination="JdB-ZJ-Hq7" id="oL5-Jb-rk5"/>
@@ -367,7 +378,7 @@
             </objects>
             <point key="canvasLocation" x="3886" y="394"/>
         </scene>
-        <!--Item-->
+        <!--Tarefas-->
         <scene sceneID="8pG-Kg-4hD">
             <objects>
                 <navigationController id="Mm7-uJ-m2H" sceneMemberID="viewController">
