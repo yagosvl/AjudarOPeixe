@@ -242,7 +242,132 @@
             </objects>
             <point key="canvasLocation" x="3064.8000000000002" y="587.85607196401804"/>
         </scene>
-        <!--Tarefas-->
+        <!--Adicionar Tarefas View Controller-->
+        <scene sceneID="YTK-Ov-otz">
+            <objects>
+                <viewController id="xtr-xp-VyV" customClass="AdicionarTarefasViewController" customModule="AjudarOPeixe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="70N-at-JHj"/>
+                        <viewControllerLayoutGuide type="bottom" id="fDk-Nz-MaV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Fe-Vu-g1s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-ZJ-Hq7">
+                                <rect key="frame" x="139" y="166" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFG-f5-Ebg">
+                                <rect key="frame" x="164" y="262" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="AdicionarTarefaButton:" destination="xtr-xp-VyV" eventType="touchUpInside" id="t0z-wi-dfp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4i-my-46U">
+                                <rect key="frame" x="166" y="103" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="AdicionarTarefaTextField" destination="JdB-ZJ-Hq7" id="oL5-Jb-rk5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ieh-P8-S7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3882" y="1055"/>
+        </scene>
+        <!--Editar Tarefa View Controller-->
+        <scene sceneID="yvB-Yc-cGt">
+            <objects>
+                <viewController id="U0F-5z-Eej" customClass="EditarTarefaViewController" customModule="AjudarOPeixe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mZ5-Hb-Egg"/>
+                        <viewControllerLayoutGuide type="bottom" id="LIc-2I-9jv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UmZ-Uh-Cdf" userLabel="EditTarefaView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-1X-IiV" userLabel="NomeTextField">
+                                <rect key="frame" x="16" y="133" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gtb-UK-abQ">
+                                <rect key="frame" x="17" y="81" width="232" height="22"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SJA-KC-gIa">
+                                        <rect key="frame" x="0.0" y="0.0" width="232" height="22"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-ly-Aiz">
+                                                <rect key="frame" x="0.0" y="0.0" width="21" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YT3-ve-6mx" userLabel="LabelId">
+                                                <rect key="frame" x="29" y="0.0" width="44.5" height="22"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="p4H-0X-oQu" userLabel="TarefaProgress">
+                                                <rect key="frame" x="81.5" y="10" width="150.5" height="2"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9oP-ly-Aiz" firstAttribute="baseline" secondItem="YT3-ve-6mx" secondAttribute="baseline" id="U9x-gJ-1CV"/>
+                                            <constraint firstItem="9oP-ly-Aiz" firstAttribute="top" secondItem="SJA-KC-gIa" secondAttribute="top" id="Vco-aB-SB3"/>
+                                            <constraint firstItem="p4H-0X-oQu" firstAttribute="top" secondItem="SJA-KC-gIa" secondAttribute="top" constant="10" id="z3Q-js-Czs"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="SJA-KC-gIa" secondAttribute="trailing" id="rec-jK-ewt"/>
+                                </constraints>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dmf-x3-hpf" userLabel="TarefaDatePicker">
+                                <rect key="frame" x="0.0" y="216" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="575397060.01970899">
+                                    <!--2019-03-27 16:31:00 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gtb-UK-abQ" firstAttribute="leading" secondItem="UmZ-Uh-Cdf" secondAttribute="leadingMargin" constant="1" id="NNl-Ui-MZI"/>
+                            <constraint firstItem="gtb-UK-abQ" firstAttribute="top" secondItem="mZ5-Hb-Egg" secondAttribute="bottom" constant="17" id="P71-gf-oiG"/>
+                            <constraint firstAttribute="trailing" secondItem="gtb-UK-abQ" secondAttribute="trailing" constant="126" id="T0T-6t-UrA"/>
+                            <constraint firstItem="u3K-1X-IiV" firstAttribute="leading" secondItem="UmZ-Uh-Cdf" secondAttribute="leadingMargin" id="UEW-Cg-tVp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u3K-1X-IiV" secondAttribute="trailing" id="c26-7f-lJx"/>
+                            <constraint firstItem="u3K-1X-IiV" firstAttribute="top" secondItem="gtb-UK-abQ" secondAttribute="bottom" constant="30" id="rgF-yE-hnb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LabelIdTarefa" destination="YT3-ve-6mx" id="Wx8-ZK-vJi"/>
+                        <outlet property="NomeTextField" destination="u3K-1X-IiV" id="yFJ-QL-avV"/>
+                        <outlet property="TarefaDatePicker" destination="dmf-x3-hpf" id="a1j-5j-KzP"/>
+                        <outlet property="TarefaProgress" destination="p4H-0X-oQu" id="J95-aE-AD1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQz-Ke-QqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3886" y="394"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="8pG-Kg-4hD">
             <objects>
                 <navigationController id="Mm7-uJ-m2H" sceneMemberID="viewController">

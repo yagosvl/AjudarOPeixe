@@ -128,6 +128,8 @@
 				3F2681E3224BE16800096115 /* CalendarioCollectionViewCell.swift */,
 				3F2681E1224BE12B00096115 /* CalendarioViewController.swift */,
 				3F2681E5224BE74F00096115 /* CalendarioInfo.swift */,
+				3F06C062224C003100F06C2B /* AdicionarTarefasViewController.swift */,
+				3F06C060224BDE5700F06C2B /* EditarTarefaViewController.swift */,
 				3F1258AA224A8E0A0062AF2C /* ListaTarefasViewController.swift */,
 				3F1EA21B22455E8F000816D2 /* Tarefa.swift */,
 				3F1EA1F422455387000816D2 /* Assets.xcassets */,
@@ -302,8 +304,10 @@
 				3F2681E2224BE12B00096115 /* CalendarioViewController.swift in Sources */,
 				3F1EA21C22455E90000816D2 /* Tarefa.swift in Sources */,
 				3F2681E4224BE16800096115 /* CalendarioCollectionViewCell.swift in Sources */,
+				3F06C063224C003100F06C2B /* AdicionarTarefasViewController.swift in Sources */,
 				3F1EA1EE22455387000816D2 /* AppDelegate.swift in Sources */,
 				3F2681E6224BE74F00096115 /* CalendarioInfo.swift in Sources */,
+				F3563D5F224CF53100C6B34C /* Peixe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
