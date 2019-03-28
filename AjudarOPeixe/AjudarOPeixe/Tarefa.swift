@@ -25,7 +25,7 @@ public class Tarefa{
         self.id = json["id"] as? Int ?? 0
         self.nome = json["nome"] as? String ?? ""
         self.data = json["data"] as? String ?? ""
-        self.percentualConcluida = json["proprietario"] as? Float ?? 0.0
+        self.percentualConcluida = json["percentualConcluida"] as? Float ?? 0.0
     
         /*self.carro = [Carro]()
     

@@ -37,8 +37,7 @@ class EditarTarefaViewController: UIViewController {
         TarefaDatePicker.datePickerMode = .date
         
         TarefaDatePicker.date = tarefaDate!
-        
-        
+        print(tarefaEdicao.percentualConcluida)
         TarefaProgress.setProgress(tarefaEdicao.percentualConcluida, animated: true)
 
         // Do any additional setup after loading the view.

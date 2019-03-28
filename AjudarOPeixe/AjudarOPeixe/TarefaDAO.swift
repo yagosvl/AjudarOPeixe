@@ -34,7 +34,8 @@ extension URLSession {
 
 class TarefaDAO{
     static var tarefas = [Tarefa]()
-       
+    
+    /*
     static func fillTarefas(){
         self.tarefas.append(Tarefa(nome: "Arrumar o quarto", data: "22/03/2019 10:00:00"))
         self.tarefas.append(Tarefa(nome: "Ir ao mercado", data: "23/03/2019 10:30:00"))
@@ -46,7 +47,7 @@ class TarefaDAO{
         self.tarefas.append(Tarefa(nome: "Lavar carro", data: "28/03/2019 10:30:00"))
         self.tarefas.append(Tarefa(nome: "Comprar feijao", data: "28/03/2019 09:45:00"))
         self.tarefas.append(Tarefa(nome: "Lavar varanda", data: "29/03/2019 10:30:00"))
-    }
+    }*/
     
     /*
     static func getTarefas(callback: @escaping ((Tarefa) -> Void)) {
@@ -159,7 +160,7 @@ class TarefaDAO{
             var tarefasCloud = [Tarefa]()
             for tarefaJson in json{
                 let tarefa = Tarefa(json: tarefaJson)
-                print("\(tarefa.nome) prevista para o dia/horário: \(tarefa.data).\n")
+                print("\(tarefa.nome) prevista para o dia/horário: \(tarefa.data); concluida: \(tarefa.percentualConcluida).\n")
                 tarefasCloud.append(tarefa)
             }
             return tarefasCloud
