@@ -8,6 +8,30 @@
 
 import Foundation
 
+extension URLSession {
+    func synchronousDataTask(with url: URL) -> (Data?, URLResponse?, Error?) {
+        var data: Data?
+        var response: URLResponse?
+        var error: Error?
+        
+        
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        let dataTask = self.dataTask(with: url) {
+            data = $0
+            response = $1
+            error = $2
+            
+            semaphore.signal()
+        }
+        dataTask.resume()
+        
+        _ = semaphore.wait(timeout: .distantFuture)
+        
+        return (data, response, error)
+    }
+}
+
 class TarefaDAO{
     static var tarefas = [Tarefa]()
        
@@ -24,6 +48,7 @@ class TarefaDAO{
         self.tarefas.append(Tarefa(nome: "Lavar varanda", data: "29/03/2019 10:30:00"))
     }
     
+    /*
     static func getTarefas(callback: @escaping ((Tarefa) -> Void)) {
         
         let endpoint: String = "https://ajudaropeixenodered.mybluemix.net/tarefa/getall"
@@ -120,19 +145,29 @@ class TarefaDAO{
         
         task.resume()
     }
+    */
+    
+    static func getTarefasFromCloud() -> [Tarefa] {
+        let url = URL(string: "https://ajudaropeixenodered.mybluemix.net/tarefa/getAll")!
+        
+        let (data, _, error) = URLSession.shared.synchronousDataTask(with: url)
+        
+        if error != nil {
+            return []
+        } else {
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [[String: AnyObject]]
+            var tarefasCloud = [Tarefa]()
+            for tarefaJson in json{
+                let tarefa = Tarefa(json: tarefaJson)
+                print("\(tarefa.nome) prevista para o dia/horário: \(tarefa.data).\n")
+                tarefasCloud.append(tarefa)
+            }
+            return tarefasCloud
+        }
+    }
     
     static func getAll() -> [Tarefa]{
-        var tars = [Tarefa]()
-        
-        getAllFromCloud{ (tarefasCloud) -> () in
-            for tar in tarefasCloud{
-                print("Encontrada a tarefa: \(tar.nome) no DAO!")
-                tars.append(tar)
-            }
-            print("OBJ TarefasCloud: \(tarefasCloud)")
-            
-        }
-        print("OBJ tars: \(tars)")
+        let tars = getTarefasFromCloud()
 
         return tars
     }
