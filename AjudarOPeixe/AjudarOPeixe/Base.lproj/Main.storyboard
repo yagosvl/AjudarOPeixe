@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Calendário-->
         <scene sceneID="FcC-mt-qF9">
             <objects>
                 <viewController id="hcE-iE-CSH" customClass="CalendarioViewController" customModule="AjudarOPeixe" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="3L2-7G-mt1">
-                                <rect key="frame" x="17" y="100" width="341" height="20.5"/>
+                                <rect key="frame" x="17" y="100" width="339.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKu-ra-enN">
                                         <rect key="frame" x="0.0" y="0.0" width="36.5" height="20.5"/>
@@ -32,42 +32,45 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cco-ac-YGa">
-                                        <rect key="frame" x="50.5" y="0.0" width="37" height="20.5"/>
+                                        <rect key="frame" x="50.5" y="0.0" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh3-R0-eiO">
-                                        <rect key="frame" x="101.5" y="0.0" width="36.5" height="20.5"/>
+                                        <rect key="frame" x="101" y="0.0" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qua" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNB-NA-3FH">
-                                        <rect key="frame" x="152" y="0.0" width="37" height="20.5"/>
+                                        <rect key="frame" x="151.5" y="0.0" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpG-5r-axe" userLabel="Quinta">
-                                        <rect key="frame" x="203" y="0.0" width="36.5" height="20.5"/>
+                                        <rect key="frame" x="202" y="0.0" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-ek-3cf">
-                                        <rect key="frame" x="253.5" y="0.0" width="37" height="20.5"/>
+                                        <rect key="frame" x="252.5" y="0.0" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sáb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjr-6Y-PTK">
-                                        <rect key="frame" x="304.5" y="0.0" width="36.5" height="20.5"/>
+                                        <rect key="frame" x="303" y="0.0" width="36.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="339.5" id="pBM-2k-7YD"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-vH-lZY" userLabel="MesSatck">
                                 <rect key="frame" x="24" y="40" width="327" height="30"/>
@@ -94,10 +97,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGc-oG-nGx" userLabel="CalendarioCollection View">
-                                <rect key="frame" x="1" y="128" width="366" height="340"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aGc-oG-nGx" userLabel="CalendarioCollection View">
+                                <rect key="frame" x="15" y="128" width="345" height="340"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="dXx-VO-HmW"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="mMl-F3-GfH">
                                     <size key="itemSize" width="40" height="40"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -112,7 +117,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DataLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yml-Sr-GbE">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DataLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yml-Sr-GbE">
                                                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -136,13 +141,15 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="TXt-vH-lZY" secondAttribute="trailing" constant="8" id="2Um-RP-djv"/>
                             <constraint firstItem="TXt-vH-lZY" firstAttribute="top" secondItem="4bY-MN-t5y" secondAttribute="bottom" constant="20" id="A8E-02-onS"/>
+                            <constraint firstItem="aGc-oG-nGx" firstAttribute="top" secondItem="3L2-7G-mt1" secondAttribute="bottom" constant="7.5" id="BPN-vj-18h"/>
                             <constraint firstItem="3L2-7G-mt1" firstAttribute="top" secondItem="TXt-vH-lZY" secondAttribute="bottom" constant="30" id="E5c-NX-dUz"/>
                             <constraint firstItem="TXt-vH-lZY" firstAttribute="leading" secondItem="sm3-56-SgJ" secondAttribute="leadingMargin" constant="8" id="QDI-BY-x7X"/>
+                            <constraint firstItem="gOh-6V-3LY" firstAttribute="top" secondItem="aGc-oG-nGx" secondAttribute="bottom" constant="150" id="V8r-SC-ewV"/>
                             <constraint firstItem="3L2-7G-mt1" firstAttribute="leading" secondItem="sm3-56-SgJ" secondAttribute="leadingMargin" constant="1" id="Y07-A1-C2u"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3L2-7G-mt1" secondAttribute="trailing" constant="1" id="YNI-8f-Vtg"/>
+                            <constraint firstItem="aGc-oG-nGx" firstAttribute="leading" secondItem="sm3-56-SgJ" secondAttribute="leading" constant="15" id="aK3-ge-kMM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="ScZ-ab-W9u"/>
+                    <tabBarItem key="tabBarItem" title="Calendário" id="ScZ-ab-W9u" userLabel="Calendário"/>
                     <connections>
                         <outlet property="CalendarioCollectionView" destination="aGc-oG-nGx" id="Swd-CL-yfk"/>
                         <outlet property="MesLabel" destination="Coj-Gi-WIj" id="7Hz-5C-xds"/>
@@ -232,11 +239,11 @@
             </objects>
             <point key="canvasLocation" x="3064.8000000000002" y="587.85607196401804"/>
         </scene>
-        <!--Item-->
+        <!--Tarefas-->
         <scene sceneID="8pG-Kg-4hD">
             <objects>
                 <navigationController id="Mm7-uJ-m2H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="oke-J5-WRl"/>
+                    <tabBarItem key="tabBarItem" title="Tarefas" id="oke-J5-WRl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qbV-EX-SYX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
