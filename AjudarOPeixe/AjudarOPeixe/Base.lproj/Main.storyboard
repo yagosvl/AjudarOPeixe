@@ -198,10 +198,6 @@
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h33-2Q-BD0" userLabel="SwtIsDone">
                                                     <rect key="frame" x="0.0" y="8" width="51" height="31"/>
-                                                    <connections>
-                                                        <action selector="IsDone:" destination="Opo-1G-yki" eventType="valueChanged" id="7Nl-OQ-5N1"/>
-                                                        <action selector="IsDoneAction:" destination="Opo-1G-yki" eventType="valueChanged" id="gtJ-f6-Xow"/>
-                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdG-Fn-Wao" userLabel="LblNome">
                                                     <rect key="frame" x="55" y="13" width="304" height="20.5"/>
@@ -222,6 +218,7 @@
                                 <connections>
                                     <outlet property="IsDone" destination="h33-2Q-BD0" id="zEg-3e-W2x"/>
                                     <outlet property="Nome" destination="CdG-Fn-Wao" id="AkH-Ku-vXW"/>
+                                    <segue destination="U0F-5z-Eej" kind="show" identifier="chamaEditarTarefa" id="Moc-fG-qDU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -230,7 +227,13 @@
                             <outlet property="delegate" destination="7Fp-0P-ewx" id="CeM-xh-YTQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tarefas do Dia" id="ScG-CR-B6G"/>
+                    <navigationItem key="navigationItem" title="Tarefas do Dia" id="ScG-CR-B6G">
+                        <barButtonItem key="rightBarButtonItem" title="Nova tarefa" id="3PJ-5A-bpx">
+                            <connections>
+                                <segue destination="xtr-xp-VyV" kind="show" id="ydl-pT-Wpv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="TarefasTableView" destination="oJl-VO-U6o" id="oJB-v1-9eg"/>
                     </connections>

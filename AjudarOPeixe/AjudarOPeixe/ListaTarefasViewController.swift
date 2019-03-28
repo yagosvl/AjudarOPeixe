@@ -23,19 +23,19 @@ class ListaTarefasViewController: UITableViewController {
             
             TarefasTableView.reloadData()
         }
-}
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TarefaDAO.fillTarefas()
         listaTarefasDoDia = TarefaDAO.getTarefasDoDia()
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,14 +109,20 @@ class ListaTarefasViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if let proximaTela = segue.destination as? EditarTarefaViewController{
+            proximaTela.tarefaEdicao = listaTarefasDoDia[(TarefasTableView.indexPathForSelectedRow?.row)!]
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+
 
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F06C061224BDE5700F06C2B /* EditarTarefaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06C060224BDE5700F06C2B /* EditarTarefaViewController.swift */; };
+		3F06C063224C003100F06C2B /* AdicionarTarefasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F06C062224C003100F06C2B /* AdicionarTarefasViewController.swift */; };
 		3F1258AB224A8E0A0062AF2C /* ListaTarefasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1258AA224A8E0A0062AF2C /* ListaTarefasViewController.swift */; };
 		3F1258AD224A8F6D0062AF2C /* TarefaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1258AC224A8F6D0062AF2C /* TarefaViewCell.swift */; };
 		3F1EA1EE22455387000816D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EA1ED22455387000816D2 /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 		3F2681E6224BE74F00096115 /* CalendarioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2681E5224BE74F00096115 /* CalendarioInfo.swift */; };
 		3F6D8ADC224957EA00BBC22E /* TarefaDAOTestador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */; };
 		3FF138892245706D005070CB /* TarefaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF138882245706D005070CB /* TarefaDAO.swift */; };
+		F3563D5F224CF53100C6B34C /* Peixe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3563D5E224CF53100C6B34C /* Peixe.swift */; };
+		F3563D61224CF5E300C6B34C /* PeixeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3563D60224CF5E300C6B34C /* PeixeDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F06C060224BDE5700F06C2B /* EditarTarefaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditarTarefaViewController.swift; sourceTree = "<group>"; };
+		3F06C062224C003100F06C2B /* AdicionarTarefasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionarTarefasViewController.swift; sourceTree = "<group>"; };
 		3F1258AA224A8E0A0062AF2C /* ListaTarefasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaTarefasViewController.swift; sourceTree = "<group>"; };
 		3F1258AC224A8F6D0062AF2C /* TarefaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TarefaViewCell.swift; path = ../TarefaViewCell.swift; sourceTree = "<group>"; };
 		3F1EA1EA22455387000816D2 /* AjudarOPeixe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AjudarOPeixe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +69,8 @@
 		3F2681E5224BE74F00096115 /* CalendarioInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioInfo.swift; sourceTree = "<group>"; };
 		3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaDAOTestador.swift; sourceTree = "<group>"; };
 		3FF138882245706D005070CB /* TarefaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaDAO.swift; sourceTree = "<group>"; };
+		F3563D5E224CF53100C6B34C /* Peixe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peixe.swift; sourceTree = "<group>"; };
+		F3563D60224CF5E300C6B34C /* PeixeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeixeDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,8 @@
 				3F1EA1F622455387000816D2 /* LaunchScreen.storyboard */,
 				3F1EA1F922455387000816D2 /* Info.plist */,
 				3FF138882245706D005070CB /* TarefaDAO.swift */,
+				F3563D5E224CF53100C6B34C /* Peixe.swift */,
+				F3563D60224CF5E300C6B34C /* PeixeDAO.swift */,
 			);
 			path = AjudarOPeixe;
 			sourceTree = "<group>";
@@ -283,9 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F06C061224BDE5700F06C2B /* EditarTarefaViewController.swift in Sources */,
 				3F1EA1F022455387000816D2 /* ViewController.swift in Sources */,
 				3F1258AD224A8F6D0062AF2C /* TarefaViewCell.swift in Sources */,
 				3FF138892245706D005070CB /* TarefaDAO.swift in Sources */,
+				F3563D61224CF5E300C6B34C /* PeixeDAO.swift in Sources */,
 				3F1258AB224A8E0A0062AF2C /* ListaTarefasViewController.swift in Sources */,
 				3F2681E2224BE12B00096115 /* CalendarioViewController.swift in Sources */,
 				3F1EA21C22455E90000816D2 /* Tarefa.swift in Sources */,
