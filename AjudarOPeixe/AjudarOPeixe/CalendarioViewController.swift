@@ -68,6 +68,8 @@ class CalendarioViewController: UIViewController, UICollectionViewDelegate, UICo
     var IndicePosicao = 0
     
     func PegarDiaInicialPosicao(){
+        print("DiaInfo ===> \(DiaInfo)")
+        print("Direcao ===> \(Direcao)")
         switch Direcao {
         case 0:
             switch DiaInfo {
@@ -110,9 +112,13 @@ class CalendarioViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Direcao = 1
+        //EspacosVazios = 5
+        //PegarDiaInicialPosicao()
         MesAtual = Meses[MesInfo]
         MesLabel.text = "\(MesAtual) \(AnoInfo)"
-        
+        print("Mes ====> \(MesInfo)")
+        //CalendarioCollectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

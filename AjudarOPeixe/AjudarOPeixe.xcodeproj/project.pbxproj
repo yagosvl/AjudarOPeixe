@@ -24,6 +24,9 @@
 		3F2681E6224BE74F00096115 /* CalendarioInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2681E5224BE74F00096115 /* CalendarioInfo.swift */; };
 		3F6D8ADC224957EA00BBC22E /* TarefaDAOTestador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */; };
 		3FF138892245706D005070CB /* TarefaDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF138882245706D005070CB /* TarefaDAO.swift */; };
+		9E62C806224E60FB00B03EAA /* GrupoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62C805224E60FB00B03EAA /* GrupoDAO.swift */; };
+		9E62C808224E632900B03EAA /* ListarGruposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62C807224E632900B03EAA /* ListarGruposViewController.swift */; };
+		9E62C80A224E643500B03EAA /* GrupoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E62C809224E643500B03EAA /* GrupoViewCell.swift */; };
 		F3563D5F224CF53100C6B34C /* Peixe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3563D5E224CF53100C6B34C /* Peixe.swift */; };
 		F3563D61224CF5E300C6B34C /* PeixeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3563D60224CF5E300C6B34C /* PeixeDAO.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		3F2681E5224BE74F00096115 /* CalendarioInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioInfo.swift; sourceTree = "<group>"; };
 		3F6D8ADB224957EA00BBC22E /* TarefaDAOTestador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaDAOTestador.swift; sourceTree = "<group>"; };
 		3FF138882245706D005070CB /* TarefaDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TarefaDAO.swift; sourceTree = "<group>"; };
+		9E62C805224E60FB00B03EAA /* GrupoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoDAO.swift; sourceTree = "<group>"; };
+		9E62C807224E632900B03EAA /* ListarGruposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListarGruposViewController.swift; sourceTree = "<group>"; };
+		9E62C809224E643500B03EAA /* GrupoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrupoViewCell.swift; sourceTree = "<group>"; };
 		F3563D5E224CF53100C6B34C /* Peixe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peixe.swift; sourceTree = "<group>"; };
 		F3563D60224CF5E300C6B34C /* PeixeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeixeDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +144,9 @@
 				3FF138882245706D005070CB /* TarefaDAO.swift */,
 				F3563D5E224CF53100C6B34C /* Peixe.swift */,
 				F3563D60224CF5E300C6B34C /* PeixeDAO.swift */,
+				9E62C805224E60FB00B03EAA /* GrupoDAO.swift */,
+				9E62C807224E632900B03EAA /* ListarGruposViewController.swift */,
+				9E62C809224E643500B03EAA /* GrupoViewCell.swift */,
 			);
 			path = AjudarOPeixe;
 			sourceTree = "<group>";
@@ -296,15 +305,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F06C061224BDE5700F06C2B /* EditarTarefaViewController.swift in Sources */,
+				9E62C808224E632900B03EAA /* ListarGruposViewController.swift in Sources */,
 				3F1EA1F022455387000816D2 /* ViewController.swift in Sources */,
 				3F1258AD224A8F6D0062AF2C /* TarefaViewCell.swift in Sources */,
 				3FF138892245706D005070CB /* TarefaDAO.swift in Sources */,
 				F3563D61224CF5E300C6B34C /* PeixeDAO.swift in Sources */,
+				9E62C80A224E643500B03EAA /* GrupoViewCell.swift in Sources */,
 				3F1258AB224A8E0A0062AF2C /* ListaTarefasViewController.swift in Sources */,
 				3F2681E2224BE12B00096115 /* CalendarioViewController.swift in Sources */,
 				3F1EA21C22455E90000816D2 /* Tarefa.swift in Sources */,
 				3F2681E4224BE16800096115 /* CalendarioCollectionViewCell.swift in Sources */,
 				3F06C063224C003100F06C2B /* AdicionarTarefasViewController.swift in Sources */,
+				9E62C806224E60FB00B03EAA /* GrupoDAO.swift in Sources */,
 				3F1EA1EE22455387000816D2 /* AppDelegate.swift in Sources */,
 				3F2681E6224BE74F00096115 /* CalendarioInfo.swift in Sources */,
 				F3563D5F224CF53100C6B34C /* Peixe.swift in Sources */,
