@@ -197,44 +197,44 @@ class TarefaDAO{
         return result
     }
     
-    static func addTarefa(tarefa : Tarefa){
-        //tarefa.id = TarefaDAO.tarefas[TarefaDAO.tarefas.count-1].id+1
-        TarefaDAO.tarefas.append(tarefa)
-        
-            // prepare json data
-        
-        let json : [String: Any] = ["id": tarefa.id,
-                                    "nome": "\(tarefa.nome)",
-                                    "data": "\(tarefa.data)",
-                                    "percentualConcluida": 0]
-        
-        //"{\"id\":\(tarefa.id),\"nome\":\"\(tarefa.nome)\",\"data\":\"\(tarefa.data)\",\"percentualConcluida\":\(0)}"
-            
-            print("json gerado: \(json)")
-        
-            let jsonData = try? JSONSerialization.data(withJSONObject: json)
-            
-            // create post request
-            let url = URL(string: "https://ajudaropeixenodered.mybluemix.net/tarefa/ins")!
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            
-            // insert json data to the request
-            request.httpBody = jsonData
-            
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {
-                    print(error?.localizedDescription ?? "No data")
-                    return
-                }
-                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                if let responseJSON = responseJSON as? [String: Any] {
-                    print(responseJSON)
-                }
-            }
-            
-            task.resume()
-    }
+//    static func addTarefa(tarefa : Tarefa){
+//        //tarefa.id = TarefaDAO.tarefas[TarefaDAO.tarefas.count-1].id+1
+//        TarefaDAO.tarefas.append(tarefa)
+//
+//            // prepare json data
+//
+//        let json : [String: Any] = ["id": tarefa.id,
+//                                    "nome": "\(tarefa.nome)",
+//                                    "data": "\(tarefa.data)",
+//                                    "percentualConcluida": 0]
+//
+//        //"{\"id\":\(tarefa.id),\"nome\":\"\(tarefa.nome)\",\"data\":\"\(tarefa.data)\",\"percentualConcluida\":\(0)}"
+//
+//            print("json gerado: \(json)")
+//
+//            let jsonData = try? JSONSerialization.data(withJSONObject: json)
+//
+//            // create post request
+//            let url = URL(string: "https://ajudaropeixenodered.mybluemix.net/tarefa/ins")!
+//            var request = URLRequest(url: url)
+//            request.httpMethod = "POST"
+//
+//            // insert json data to the request
+//            request.httpBody = jsonData
+//
+//            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//                guard let data = data, error == nil else {
+//                    print(error?.localizedDescription ?? "No data")
+//                    return
+//                }
+//                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+//                if let responseJSON = responseJSON as? [String: Any] {
+//                    print(responseJSON)
+//                }
+//            }
+//
+//            task.resume()
+//    }
     
     static func updTarefa(tarefa : Tarefa){
         if let tarefaUpd = TarefaDAO.getAll().first(where: { $0.id == tarefa.id }){
@@ -251,4 +251,61 @@ class TarefaDAO{
             }
         }
     }
+    
+    static func addTarefa(tarefa : Tarefa){
+        //tarefa.id = TarefaDAO.tarefas[TarefaDAO.tarefas.count-1].id+1
+        TarefaDAO.tarefas.append(tarefa)
+        
+        // prepare json data
+        let jsonEnc = "{\"id\":\(tarefa.id),\"nome\":\"\(tarefa.nome)\",\"data\":\"\(tarefa.data)\",\"percentualConcluida\":\(0)}"
+        
+        let data = jsonEnc.data(using: .utf8)!
+        
+        print("json gerado: \(data)")
+        
+        
+        //let jsonData = try? JSONSerialization.data(withJSONObject: jsonEnc)
+        
+        do {
+            if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [String: AnyObject] //[Dictionary<String,AnyObject>]
+            {
+                print("=====>jsonArray:\(jsonArray)") // use the json here
+                //let jsonData = try? JSONSerialization.data(withJSONObject: jsonArray)
+                
+                
+                // create post request
+                let url = URL(string: "https://ajudaropeixenodered.mybluemix.net/tarefa/ins")!
+                
+                var request = URLRequest(url: url)
+                request.httpMethod = "POST"
+                var headers = request.allHTTPHeaderFields ?? [:]
+                headers["Content-Type"] = "application/json"
+                request.allHTTPHeaderFields = headers
+                
+                // insert json data to the request
+                request.httpBody = data//jsonData
+                
+                let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                    guard let data = data, error == nil else {
+                        //print(error?.localizedDeion ?? "No data")
+                        return
+                    }
+                    let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+                    if let responseJSON = responseJSON as? [String: Any] {
+                        print("response ======> \(responseJSON)")
+                    }
+                }
+                
+                
+                task.resume()
+            } else {
+                print("=====>bad json")
+            }
+        } catch let error as NSError {
+            print(error)
+        }
+        
+    }
+
 }
+
